@@ -21,3 +21,7 @@ alias reload="source ~/.zshrc"
 
 # Add alias for clearing the terminal
 alias c="clear"
+
+alias n="nvim"
+alias cds="cd ~/.dotfiles/scripts/"
+alias cdp="cd ~/Projects/"
