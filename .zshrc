@@ -13,15 +13,22 @@ export LS_COLORS="*.jpg=33:*.jpeg=33:*.png=36:*.gif=36:*.bmp=36:*.svg=36:*.webp=
 # Customize the prompt
 export PROMPT="%F{cyan}%n@%m%f:%F{yellow}%~%f$ "  # Username and PC name in teal, directory in yellow
 
-# Use GNU `ls` with `LS_COLORS` (macOS)
+# Alias set up by DC
 alias ls="gls --color=auto"
-
-# Add alias for reloading `.zshrc`
 alias reload="source ~/.zshrc"
-
-# Add alias for clearing the terminal
 alias c="clear"
-
 alias n="nvim"
 alias cds="cd ~/.dotfiles/scripts/"
 alias cdp="cd ~/Projects/"
+
+# Initialize Starship prompt
+eval "$(starship init zsh)"
+
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+#disable underline
+(( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
+ZSH_HIGHLIGHT_STYLES[path]=none
+ZSH_HIGHLIGHT_STYLES[path_prefix]=none
+
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
