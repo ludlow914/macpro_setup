@@ -21,7 +21,11 @@ alias n="nvim"
 alias cds="cd ~/.dotfiles/scripts/"
 alias cdp="cd ~/Projects/"
 
+# Tmux
+export TMUX_CONFIG="$HOME/.config/tmux/.tmux.conf"
+
 # Initialize Starship prompt
+export STARSHIP_CONFIG="~/.config/starship/starship.toml"
 eval "$(starship init zsh)"
 
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
