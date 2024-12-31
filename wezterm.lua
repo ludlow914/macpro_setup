@@ -31,7 +31,7 @@ config.window_padding = {
 -- Background settings
 -- Add gradient background
 config.window_background_gradient = {
-  colors = { '#000000', '#0a0a1f', '#1a1a33' },
+  colors = { '#000000', '#0a0a1f', '#2a2a55' },
   orientation = { Linear = { angle = -45.0 } },
 }
 
